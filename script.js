@@ -92,16 +92,13 @@ var paidTicket = a.map((x) => {
 });
 
 var freeTicket = a.map((x) => {
-    return parseInt(x.totalFreeTickets);
+  return parseInt(x.totalFreeTickets);
 });
 
-
-TotalTicket = paidTicket.map(function (num,index){
-    return num + freeTicket[index];
-})
+TotalTicket = paidTicket.map((num, index) => {
+  return num + freeTicket[index];
+});
 
 console.log(paidTicket);
 console.log(freeTicket);
-console.log(TotalTicket + ' This is total ticket!!!');
-
-
+console.log(TotalTicket + " This is total ticket!!!");
