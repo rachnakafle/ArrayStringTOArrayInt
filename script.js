@@ -85,8 +85,32 @@ var a = [
   },
 ];
 
-var arrofNum = a.map((x) => {
+console.log(a[0].totalPaidTickets + a[0].totalFreeTickets);
+
+var paidTicket = a.map((x) => {
   return parseInt(x.totalPaidTickets);
 });
 
-console.log(arrofNum);
+var freeTicket = a.map((x) => {
+    return parseInt(x.totalFreeTickets);
+});
+
+// TotalTicket = paidTicket.map(x=>x) + freeTicket.map(x=>x);
+
+TotalTicket = paidTicket.map(function (num,index){
+    return num + freeTicket[index];
+})
+
+console.log(paidTicket);
+console.log(freeTicket);
+console.log(TotalTicket + ' This is total ticket!!!');
+
+
+var array1 = [1,2,3,4];
+var array2 = [5,6,7,8];
+
+var sum = array1.map(function (num, idx) {
+  return num + array2[idx];
+}); 
+
+console.log(sum);
